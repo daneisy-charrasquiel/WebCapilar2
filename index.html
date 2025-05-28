@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curls of confidence - Productos Skala para Cabello Rizado</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+    
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-spa me-2"></i>curls of confidence
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#skalas">Productos Skala</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#uso">Cómo Usarlos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tips">Tips Rizados</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contactanos</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#compra">Comprar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Descubre la Magia de Skala</h1>
+            <p class="lead mb-4">Transforma tu cabello rizado con nuestros productos especializados.</p>
+            <p class="lead mb-4">¡Dale a tus rizos el amor que merecen!</p>
+            <a href="#skalas" class="btn btn-morado btn-lg px-4 me-2">Ver Productos</a>
+            <a href="#uso" class="btn btn-outline-light btn-lg px-4">Aprender a Usar</a>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="skalas" class="py-5 ">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Línea Completa de Productos Skala</h2>
+            <div class="row g-4">
+
+                <!-- Producto 1: Skala Dona -->
+                <div class="col-md-4">
+                    <div class="card skala-card h-100">
+                        <img src="{{ url_for('static', filename='img/SKALA_DONA.webp') }}" style="object-fit: cover;"  class="w-100 h-100" alt="Skala Dona">
+                        <div class="card-body">
+                            <h4 class="text-center">SKALA DONA</h4>
+                            <p class="card-text">Para cabello rizado fino que necesita volumen y definición sin peso.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge time-badge">2-4 minutos</span>
+                                <small class="text-muted">Tiempo de aplicación</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Aporta volumen</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Define sin encrespar</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Fórmula ligera</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-morado w-100" data-bs-toggle="modal" data-bs-target="#modalDona">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Skala Expert -->
+                <div class="col-md-4" >
+                    <div class="card skala-card h-100">
+                        <img src="{{ url_for('static', filename='img/skala_sper.jpg') }}" style="object-fit: cover;"  class="w-80 h-80" alt="Skala Expert">
+                        <div class="card-body">
+                            <h4 class="text-center">SKALA EXPERT</h4>
+                            <p class="card-text">Tratamiento profesional para rizos medios que necesitan nutrición.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge time-badge">3-5 minutos</span>
+                                <small class="text-muted">Tiempo de aplicación</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Nutrición intensa</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Reduce frizz</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Con aceite de argán</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-morado w-100" data-bs-toggle="modal" data-bs-target="#modalExpert">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Skala Motor -->
+                <div class="col-md-4">
+                    <div class="card skala-card h-100">
+                        <img src="{{ url_for('static', filename='img/skala_azul.jpeg') }}" style="object-fit: cover;"  class="w-55 h-55" alt="Skala Motor">
+                        <div class="card-body">
+                            <h4 class="text-center">SKALA MOTOR</h4>
+                            <p class="card-text">Para cabello rizado grueso y rebelde que necesita control intenso.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge time-badge">5-8 minutos</span>
+                                <small class="text-muted">Tiempo de aplicación</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Control de rizos rebeldes</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Alto poder de definición</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Con proteínas</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-morado w-100" data-bs-toggle="modal" data-bs-target="#modalMotor">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Skala Babosa -->
+                <div class="col-md-4">
+                    <div class="card skala-card h-100">
+                        <img src="{{ url_for('static', filename='img/SKALA-TRATAMIENTO-BABOSA.webp') }}"  style="object-fit: cover;"  class="w-100 h-100" alt="Skala Babosa">
+                        <div class="card-body">
+                            <h4 class="text-center">SKALA BABOSA</h4>
+                            <p class="card-text">Hidratación profundamente, fortalece y da brillo al cabello.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge time-badge">2-4 minutos</span>
+                                <small class="text-muted">Tiempo de aplicación</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Hidratación intensa gracias al aloe vera</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i>Fortalece y repara la fibra capilar</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Define rizos sin frizz ni peso extra</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Tambien puede usarse como crema de peinar</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-morado w-100" data-bs-toggle="modal" data-bs-target="#modalBabosa">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Skala Morango -->
+                <div class="col-md-4">
+                    <div class="card skala-card h-100">
+                        <img src="{{ url_for('static', filename='img/Tratamiento-Skala-Morango.jpg') }}" style="object-fit: cover;"  class="w-100 h-100" alt="Skala Morango">
+                        <div class="card-body">
+                            <h4 class="text-center">SKALA MORANGO</h4>
+                            <p class="card-text"> ideal para dar suavidad, brillo y una hidratación ligera.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge time-badge">2-4 minutos</span>
+                                <small class="text-muted">Tiempo de aplicación</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Suaviza profundamente el cabello</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Aporta brillo y sedosidad</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Hidrata sin dejar sensación grasosa</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-morado w-100" data-bs-toggle="modal" data-bs-target="#modalMorango">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Skala Mayonesa -->
+                <div class="col-md-4">
+                    <div class="card skala-card h-100">
+                        <img src="{{ url_for('static', filename='img/Mayonesa.webp') }}" style="object-fit: cover;" class="w-100 h-100" alt="Skala Mayonesa">
+                        <div class="card-body">
+                            <h4 class="text-center">SKALA DE MAYONESA</h4>
+                            <p class="card-text">Sirve para nutrir intensamente y restaurar el cabello dañado o seco.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge time-badge">3-10 minutos</span>
+                                <small class="text-muted">Tiempo de aplicación</small>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Nutrición profunda ideal para cabello seco o débil</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Para todo tipo de rizos</li>
+                                <li><i class="fas fa-check-circle me-2 text-success"></i> Con extracto de coco</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-morado w-100" data-bs-toggle="modal" data-bs-target="#modalMayonesa">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cómo Usar -->
+    <section id="uso" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Cómo Usar los Productos Skala</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fas fa-shower text-morado me-2"></i> Hidratación</h4>
+                            <ul>
+                                <li>Lavar con shampoo sin sulfatos</li>
+                                <li>Aplicar producto Skala según tipo de rizo</li>
+                                <li>Dejar actuar el tiempo recomendado</li>
+                                <li>Enjuagar con agua fría</li>
+                                <li>Secar con difusor o al aire</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fas fa-spa text-morado me-2"></i> Métodos de Definición</h4>
+                            <p><strong>Método Scrunch:</strong></p>
+                            <ul>
+                                <li>Aplicar producto en cabello húmedo</li>
+                                <li>"Aplastar" los rizos hacia arriba con las manos</li>
+                                <li>Dejar secar al aire libre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Tips -->
+    <section id="tips" class="py-5 bg-light ">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Tips para Rizados Perfectos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fas fa-water text-morado me-2"></i> Hidratación</h4>
+                            <ul>
+                                <li>Usa la regla L.O.C. (Liquid, Oil, Cream)</li>
+                                <li>Aplica productos en cabello húmedo</li>
+                                <li>Mascarilla semanal profunda</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fas fa-cut text-morado me-2"></i> Cortes</h4>
+                            <ul>
+                                <li>Corte en capas para volumen</li>
+                                <li>Puntas cada 3 meses</li>
+                                <li>Busca estilistas especializados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fas fa-moon text-morado me-2"></i> Noche</h4>
+                            <ul>
+                                <li>Cofias de satén o seda</li>
+                                <li>Coletas sueltas para dormir</li>
+                                <li>Refresca rizos con spray</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN DE COMPRA -->
+    <section id="Compra" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Compra tus Productos Skala</h2>
+            <p class="text-center mb-4">Selecciona la cantidad de cada producto y haz clic en "Agregar al carrito". El total se calculará automáticamente.</p>
+            <form id="compraForm" method="POST" action="{{ url_for('compra') }}">
+                <div class="row g-4 justify-content-center">
+                    <!-- Producto 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <img src="{{ url_for('static', filename='img/skala_azul.jpeg') }}" class="card-img-top producto-img mx-auto" alt="Skala Motor" style="max-height:180px;object-fit:contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Skala Motor</h5>
+                                <p class="mb-2">Precio: $<span id="precio-motor">25000</span></p>
+                                <input type="number" min="0" value="0" name="cantidad_motor" class="form-control mb-2 cantidad-input" data-precio="25000">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <img src="{{ url_for('static', filename='img/SKALA_DONA.webp') }}" class="card-img-top producto-img mx-auto" alt="Skala Dona" style="max-height:180px;object-fit:contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Skala Dona</h5>
+                                <p class="mb-2">Precio: $<span id="precio-dona">23000</span></p>
+                                <input type="number" min="0" value="0" name="cantidad_dona" class="form-control mb-2 cantidad-input" data-precio="23000">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <img src="{{ url_for('static', filename='img/skala_sper.jpg') }}" class="card-img-top producto-img mx-auto" alt="Skala Expert" style="max-height:180px;object-fit:contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Skala Expert</h5>
+                                <p class="mb-2">Precio: $<span id="precio-expert">24000</span></p>
+                                <input type="number" min="0" value="0" name="cantidad_expert" class="form-control mb-2 cantidad-input" data-precio="24000">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <img src="{{ url_for('static', filename='img/SKALA-TRATAMIENTO-BABOSA.webp') }}" class="card-img-top producto-img mx-auto" alt="Skala Babosa" style="max-height:180px;object-fit:contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Skala Babosa</h5>
+                                <p class="mb-2">Precio: $<span id="precio-babosa">22000</span></p>
+                                <input type="number" min="0" value="0" name="cantidad_babosa" class="form-control mb-2 cantidad-input" data-precio="22000">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <img src="{{ url_for('static', filename='img/Tratamiento-Skala-Morango.jpg') }}" class="card-img-top producto-img mx-auto" alt="Skala Morango" style="max-height:180px;object-fit:contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Skala Morango</h5>
+                                <p class="mb-2">Precio: $<span id="precio-morango">21000</span></p>
+                                <input type="number" min="0" value="0" name="cantidad_morango" class="form-control mb-2 cantidad-input" data-precio="21000">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <img src="{{ url_for('static', filename='img/Mayonesa.webp') }}" class="card-img-top producto-img mx-auto" alt="Skala Mayonesa" style="max-height:180px;object-fit:contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Skala Mayonesa</h5>
+                                <p class="mb-2">Precio: $<span id="precio-mayonesa">20000</span></p>
+                                <input type="number" min="0" value="0" name="cantidad_mayonesa" class="form-control mb-2 cantidad-input" data-precio="20000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <h4>Total: $<span id="total-compra">0</span></h4>
+                    <button type="submit" class="btn btn-morado btn-lg mt-2">Agregar al carrito</button>
+                </div>
+                {% if total %}
+                <div class="alert alert-success mt-3">
+                    Compra registrada. Total: ${{ total }}
+                </div>
+                {% endif %}
+
+            </form>
+        </div>
+    </section>
+    <script>
+        // Calcula el total en el frontend
+        document.querySelectorAll('.cantidad-input').forEach(input => {
+            input.addEventListener('input', calcularTotal);
+        });
+        function calcularTotal() {
+            let total = 0;
+            document.querySelectorAll('.cantidad-input').forEach(input => {
+                const cantidad = parseInt(input.value) || 0;
+                const precio = parseInt(input.getAttribute('data-precio'));
+                total += cantidad * precio;
+            });
+            document.getElementById('total-compra').textContent = total;
+            
+        }
+    </script>
+    <!-- Formulario de Contáctanos -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Contáctanos</h2>
+            <form id="contactForm">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-morado btn-lg">Enviar Mensaje</button>
+                </div>
+            </form>
+            <!-- Toast de notificación Bootstrap centrado en pantalla -->
+            <div class="position-fixed top-80 start-80 translate-middle p-3" style="z-index: 1100"></div>
+                <div id="contactToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span id="contactToastMsg"></span>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const toastMsg = document.getElementById('contactToastMsg');
+            toastMsg.textContent = `¡Gracias, ${nombre}! Nos pondremos en contacto contigo pronto.`;
+            const toastEl = document.getElementById('contactToast');
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+   <!-- Modales para cada producto -->
+
+    <!-- Modal Skala Dona -->
+    <div class="modal fade" id="modalDona" tabindex="-1" aria-labelledby="modalDonaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-morado text-white">
+                    <h5 class="modal-title" id="modalDonaLabel">SKALA DONA</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/SKALA_DONA.webp') }}" class="img-fluid rounded mb-3" alt="Skala Dona">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-morado">Para rizos finos</span>
+                                <span class="badge bg-info">2-4 minutos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-morado">Descripción Completa</h5>
+                            <p>Tratamiento especialmente formulado para cabello rizado fino que necesita volumen en la raíz y definición sin añadir peso a los rizos.</p>
+                            
+                            <h5 class="text-morado mt-4">Beneficios Clave:</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Proporciona volumen desde la raíz</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Define los rizos sin encrespamiento</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Fórmula ultra ligera que no aplasta los rizos</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Contiene extracto de almendras</li>
+                            </ul>
+                            
+                            <h5 class="text-morado mt-3">Modo de Uso:</h5>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Lavar el cabello con shampoo sin sulfatos</li>
+                                <li class="list-group-item">Aplicar generosamente sobre cabello húmedo</li>
+                                <li class="list-group-item">Dejar actuar de 2 a 4 minutos</li>
+                                <li class="list-group-item">Enjuagar con agua fría</li>
+                                <li class="list-group-item">Secar con difusor o al aire</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-morado">Añadir a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Skala Expert -->
+    <div class="modal fade" id="modalExpert" tabindex="-1" aria-labelledby="modalExpertLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-morado text-white">
+                    <h5 class="modal-title" id="modalExpertLabel">SKALA EXPERT</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/skala_sper.jpg') }}" class="img-fluid rounded mb-3" alt="Skala Expert">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-morado">Para rizos medios</span>
+                                <span class="badge bg-info">3-5 minutos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-morado">Descripción Completa</h5>
+                            <p>Tratamiento profesional con aceite de argán para rizos medios que necesitan nutrición intensa y control de frizz.</p>
+                            
+                            <h5 class="text-morado mt-4">Beneficios Clave:</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Nutrición profunda con aceite de argán</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Reduce el frizz hasta en 72 horas</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Protege contra el daño térmico</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Fórmula sin parabenos</li>
+                            </ul>
+                            
+                            <h5 class="text-morado mt-3">Modo de Uso:</h5>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Lavar con shampoo limpiador</li>
+                                <li class="list-group-item">Aplicar de medios a puntas</li>
+                                <li class="list-group-item">Dejar actuar 3-5 minutos</li>
+                                <li class="list-group-item">Enjuagar completamente</li>
+                                <li class="list-group-item">Estilizar como de costumbre</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-morado">Añadir a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Skala Motor -->
+    <div class="modal fade" id="modalMotor" tabindex="-1" aria-labelledby="modalMotorLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-morado text-white">
+                    <h5 class="modal-title" id="modalMotorLabel">SKALA MOTOR</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/skala_azul.jpeg')}}" class="img-fluid rounded mb-3" alt="Skala Motor">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-morado">Para rizos gruesos</span>
+                                <span class="badge bg-info">5-8 minutos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-morado">Descripción Completa</h5>
+                            <p>Tratamiento intensivo para rizos gruesos y rebeldes que necesitan control y definición extrema.</p>
+                            
+                            <h5 class="text-morado mt-4">Beneficios Clave:</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Control de rizos rebeldes</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Alto poder de definición</li> 
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Con proteínas de trigo</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Fórmula sin sulfatos</li> 
+                            </ul>
+
+                            <h5 class="text-morado mt-3">Modo de Uso:</h5>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Lavar con shampoo limpiador</li>
+                                <li class="list-group-item">Aplicar de medios a puntas</li>
+                                <li class="list-group-item">Dejar actuar 3-5 minutos</li>
+                                <li class="list-group-item">Enjuagar completamente</li>
+                                <li class="list-group-item">Estilizar como de costumbre</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-morado">Añadir a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal Skala Babosa -->
+    <div class="modal fade" id="modalBabosa" tabindex="-1" aria-labelledby="modalBabosaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-morado text-white">
+                    <h5 class="modal-title" id="modalBabosaLabel">SKALA BABOSA</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/SKALA-TRATAMIENTO-BABOSA.webp')}}" class="img-fluid rounded mb-3" alt="Skala Babosa">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-morado">Para rizos gruesos</span>
+                                <span class="badge bg-info">2-4 minutos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-morado">Descripción Completa</h5>
+                            <p>Hidratación profunda, fortalece y da brillo al cabello gracias al aloe vera. Ideal para rizos que buscan definición sin frizz ni peso extra.</p>
+                            
+                            <h5 class="text-morado mt-4">Beneficios Clave:</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Hidratación intensa gracias al aloe vera</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Fortalece y repara la fibra capilar</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Define rizos sin frizz ni peso extra</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> También puede usarse como crema de peinar</li>
+                            </ul>
+
+                            <h5 class="text-morado mt-3">Modo de Uso:</h5>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Lavar el cabello con shampoo sin sulfatos</li>
+                                <li class="list-group-item">Aplicar generosamente sobre cabello húmedo</li>
+                                <li class="list-group-item">Dejar actuar de 2 a 4 minutos</li>
+                                <li class="list-group-item">Enjuagar con agua fría</li>
+                                <li class="list-group-item">Secar con difusor o al aire</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-morado">Añadir a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Skala Morango -->
+    <div class="modal fade" id="modalMorango" tabindex="-1" aria-labelledby="modalMorangoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-morado text-white">
+                    <h5 class="modal-title" id="modalMorangoLabel">SKALA MORANGO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/Tratamiento-Skala-Morango.jpg') }}" class="img-fluid rounded mb-3" alt="Skala M orango">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-morado">Para rizos suaves</span>
+                                <span class="badge bg-info">2-4 minutos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-morado">Descripción Completa</h5>
+                            <p>Tratamiento ideal para dar suavidad, brillo y una hidratación ligera al cabello rizado.</p>
+                            
+                            <h5 class="text-morado mt-4">Beneficios Clave:</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Suaviza profundamente el cabello</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Aporta brillo y sedosidad</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Hidrata sin dejar sensación grasosa</li>
+                            </ul>
+                            
+                            <h5 class="text-morado mt-3">Modo de Uso:</h5>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Lavar el cabello con shampoo sin sulfatos</li>
+                                <li class="list-group-item">Aplicar generosamente sobre cabello húmedo</li>
+                                <li class="list-group-item">Dejar actuar de 2 a 4 minutos</li>
+                                <li class="list-group-item">Enjuagar con agua fría</li>
+                                <li class="list-group-item">Secar con difusor o al aire</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-morado">Añadir a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Skala Mayonesa -->
+    <div class="modal fade" id="modalMayonesa" tabindex="-1" aria-labelledby="modalMayonesaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-morado text-white">
+                    <h5 class="modal-title" id="modalMayonesaLabel">SKALA MAYONESA</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/Mayonesa.webp') }}" class="img-fluid rounded mb-3" alt="Skala Mayonesa">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-morado">Para cabello seco</span>
+                                <span class="badge bg-info">3-10 minutos</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-morado">Descripción Completa</h5>
+                            <p>Tratamiento intensivo para nutrir y restaurar el cabello dañado o seco, ideal para rizos de todo tipo.</p>
+                            
+                            <h5 class="text-morado mt-4">Beneficios Clave:</h5>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Nutrición profunda ideal para cabello seco o débil</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Para todo tipo de rizos</li>
+                                <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> Con extracto de coco</li>
+                            </ul>
+                            
+                            <h5 class="text-morado mt-3">Modo de Uso:</h5>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item">Lavar el cabello con shampoo sin sulfatos</li>
+                                <li class="list-group-item">Aplicar generosamente sobre cabello húmedo</li>
+                                <li class="list-group-item">Dejar actuar de 3 a 10 minutos</li>
+                                <li class="list-group-item">Enjuagar con agua fría</li>
+                                <li class="list-group-item">Secar con difusor o al aire</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-morado">Añadir a Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+
+    <!-- F</script>ooter -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-</div>center">
+            <p class="mb-0">© 2023 curls of confidence - Todos los derechos reservados para Daneisy</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script personalizado -->
+    <script>
+        // Opcional: Puedes añadi</div>r interactividad aquí
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ejemplo: Animación al mostrar modales
+           const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.addEventListener('shown.bs.modal', function () {
+                    const img = this.querySelector('img');
+                    img.style.transform = 'scale(1.03)';
+                    setTimeout(() => {
+                        img.style.transform = 'scale(1)';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
