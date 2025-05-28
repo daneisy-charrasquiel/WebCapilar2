@@ -1,0 +1,380 @@
+/* styles.css */
+
+/* Variables de color */
+:root {
+    --morado-primario: #6a1b9a;
+    --morado-secundario: #9c27b0;
+    --morado-claro: #ce93d8;
+    --morado-oscuro: #4a148c;
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris-medio: #e0e0e0;
+    --gris-oscuro: #616161;
+    --negro: #212121;
+    --verde: #4caf50;
+    --rojo: #f44336;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--negro);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+  /* Navbar */
+  .navbar {
+    background-color: var(--morado-oscuro);
+    box-shadow: 0 2px 10px rgba(192, 28, 28, 0.538);
+    padding: 0.8rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand i {
+    font-size: 1.8rem;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    color: rgba(230, 46, 196, 0.85);
+  }
+  
+  .nav-link:hover {
+    color: var(--morado-claro) !important;
+  }
+  
+  .nav-link.active {
+    color: var(--morado-claro) !important;
+    font-weight: 600;
+  }
+  
+  /* Hero Section  */
+  .hero-section {
+    background: linear-gradient(rgba(151, 61, 242, 0.268), rgba(151, 61, 242, 0.268)),
+                url("/static/img/muyer.jpeg") center/cover no-repeat;
+    color: var(--blanco);
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Botones */
+  .btn-morado {
+    background-color: var(--morado-primario);
+    color: var(--blanco);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-morado:hover {
+    background-color: var(--morado-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(218, 182, 240, 0.4);
+  }
+  
+  .btn-outline-light {
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    background-color: transparent;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: var(--blanco);
+    color: var(--morado-primario) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cards de Productos */
+  .skala-card {
+    
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    background-color: var(--blanco);
+  }
+  
+  .skala-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-img {
+    height: 250px;
+    object-fit: contain;
+    padding: 1.5rem;
+    background-color: var(--gris-claro);
+    border-bottom: 1px solid var(--gris-medio);
+    transition: transform 0.3s ease;
+  }
+  
+  .skala-card:hover .product-img {
+    transform: scale(1.05);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-body h4 {
+    font-weight: 600;
+    color: var(--morado-oscuro);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .card-text {
+    color: var(--gris-oscuro);
+    margin-bottom: 1.25rem;
+    min-height: 60px;
+  }
+  
+  .time-badge {
+    background-color: var(--morado-claro);
+    color: var(--morado-oscuro);
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+  }
+  
+  .list-unstyled li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  /* Modales */
+  .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-header {
+    background-color: var(--morado-primario);
+    color: var(--blanco);
+    border-bottom: none;
+    padding: 1.5rem;
+  }
+  
+  .modal-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .modal-body {
+    padding: 2rem;
+  }
+  
+  .modal-body img {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+  }
+  
+  .modal-footer {
+    border-top: none;
+    padding: 1.5rem;
+    background-color: var(--gris-claro);
+  }
+  
+  /* Secciones */
+  .section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--morado-primario);
+    border-radius: 2px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .hero-section h1 {
+      font-size: 2.8rem;
+    }
+    
+    .hero-section p {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 4rem 0;
+      min-height: 70vh;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.3rem;
+    }
+    
+    .hero-section p {
+      font-size: 1.1rem;
+    }
+    
+    .product-img {
+      height: 200px;
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+    
+    .btn-morado,
+    .btn-outline-light {
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-section {
+      min-height: 60vh;
+    }
+    
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+    
+    .navbar-brand {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .skala-card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Retrasos para animación escalonada */
+  .skala-card:nth-child(1) { animation-delay: 0.1s; }
+  .skala-card:nth-child(2) { animation-delay: 0.2s; }
+  .skala-card:nth-child(3) { animation-delay: 0.3s; }
+  .skala-card:nth-child(4) { animation-delay: 0.4s; }
+  .skala-card:nth-child(5) { animation-delay: 0.5s; }
+  .skala-card:nth-child(6) { animation-delay: 0.6s; }
+
+  .SizeImages img{
+  width: 200px;
+  height: 200px;
+}
+
+/* Estilos para el carrusel */
+.w-85 {
+    width: 85% !important;
+}
+
+.h-85 {
+    height: 85vh !important;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #000;
+    text-align: center;
+}
+
+/* Estilo para el botón de WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para el carrusel */
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-item img {
+    max-height: 400px; /* Ajusta según necesites */
+    margin: 0 auto;
+}
+

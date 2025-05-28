@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra Confirmada</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px 20px 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        a.btn-custom {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #6f42c1;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        a.btn-custom:hover {
+            background-color: #5936a2;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 40px 10px 10px 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+        /* Navbar custom color */
+        .navbar {
+            background-color: #6f42c1;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-spa me-2"></i>curls of confidence
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#skalas">Productos Skala</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#uso">Cómo Usarlos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tips">Tips Rizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#compra">Comprar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <h1>¡Gracias por tu compra!</h1>
+        <p>Total pagado: ${{ total }}</p>
+        <a href="{{ url_for('index') }}" class="btn-custom">Volver a la tienda</a>
+    </div>
+    <!-- Bootstrap JS (for navbar toggler) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
